@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.banner{
+    background-image: url(imagemBanner.jpg);
+    background-size: cover;
+    padding: 51px;
+    z-index: 1;
+
+}
+.banner::before{
+    content: '';
+    background: #000;
+    opacity: .5;
+    position: absolute;
+    width: 100%;
+    height: 65%;
+    left: 0;
+    top: 38px;
+}
+
+h1{
+    font-family: sans-serif;
+    margin: 10px 69px;
+    color: lightgray;
+    font-weight: 100;
+}
+p {
+    font-family: sans-serif;
+    margin: 10px 69px;
+    color: lightgray;
+    font-weight: 100;
+}
+.conteiner{
+    display: flex;
+}
+[class="conteiner"]>section{
+    margin: 20px 20px;
+}
+
+.conteiner > section > img{
+    float: left;
+    margin: 0 10px;
+}
+
+section > h2{
+    font-family: sans-serif;
+    font-size: 16px;
+    margin: 20px 21px 0;
+}
+section > p{
+    margin: 8px 13px;
+    font-family: sans-serif;
+    color: black;
+    width: 93%;
+}
+section p+h2{
+    flex-wrap: wrap;
+}
+button{
+    background-color: #cb0000;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: sans-serif;
+    padding: 18px 45px;
+    margin: 19px 39%;
+}
+hr {
+    margin: 10px 43px;
+    border-color: #888888;
+    border-top: none;
+}
+.pessoas{
+    display: flex;
+    width: 80%;
+    margin: 0 140px;
+}
+}
+[class="pessoas"]>section{
+    margin: 20px 17px 0 39px;
+    align-self: baseline;
+    text-align: justify;
+}
+
+.pessoas > section > img{
+    float: left;
+    margin: 0 10px 10px;
+}
+
+.pessoas > section > h2{
+    font-size: 26px !important;
+}
+
+.pessoas > section{
+    margin: 0 18px 0px 3px;
+}
+.informacao > h2 {
+    color: #000;
+    font-size: 30px;
+    padding: 10px 0px 0px 25px;
+}
+.informacao > p {
+    color: rgb(167, 164, 164);
+    font-size: 30px;
+    padding: 10px 0px 0px 25px;
+}

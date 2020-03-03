@@ -1,0 +1,4 @@
+O intuito da aula de hoje era de fazer uma cópia da página atual do https://abrasuaconta.santander.com.br/
+usando boas sintaxes de html e css.
+Como são duplas rotativas, hoje fiz uma dupla com o José.
+relembramos conceitos básicos de html e css.
