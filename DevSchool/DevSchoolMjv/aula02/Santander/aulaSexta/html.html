@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var prom = prompt("Insira a letra animal");
+        console.log(prom);
+
+        var valorInser = parseInt(prom);
+        console.log(valorInser);
+
+        var linebreak = "<br/>";
+
+        if (prom == valorInser) {
+            document.write("Insira uma letra Tiozão!");
+        }else{
+            console.log(typeof prom);
+
+            var grade = prom;
+
+            document.write("intering switch block! ");
+
+            switch (grade) {
+                case 'A':document.write("Good Job! <br/>");                    
+                break;
+
+                case 'B':document.write("Pretty good<br/>");
+                break;
+
+                case 'C':document.write("Agora foi<br/>");
+                break;
+            
+                default:document.write("Faltou a letra Animal!")
+                    break;
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>
