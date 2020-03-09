@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo Array</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>Entendendo funções do Array</h1>")
+        //iremos começar criando um array de nomes de alunos
+        var alunos = ["Myke","Joney","Renan A.","Ingrid","Erian","Nicolas","Raul","Lucas V.","Priscila","Matheus","Renan C.","Ana Carolina","Diego","Vinicius","Karoline","Rafael"];
+
+        //suponhamos que entrou um aluno e precisamos colocar ele em uma posição específica da lista
+        //abaixo iremos inserir na posição de índice 2 do array mais um aluno, o Diego S., sem deletar nenhum dado
+        alunos.splice(2,0,"Diego S.");
+
+        //agora vamos dar um sobrenome ao Diego que está somente com nome, para diferenciar um de outro
+        //vamos até a posição que o Diego esta e vamos substitui-lo por Diego Minelli
+        alunos.splice(15,"Diego","Diego Minelli");
+        //estou acessando o array na posição 15, deletando o conteúdo que esta nesta posição, e substituindo por "Diego Minelli"
+
+        //agora colocaremos mais um nome na lista sem deletar nenhum outro nome
+        //usando a propriedade indexOf, iremos colocar o Caio após o Nicolas
+        alunos.splice(alunos.indexOf("Nicolas")+1,0,"Caio");
+        //aqui usando o splice para fazer a substituição, e dentro usamos o indexOf para mostrar em qual posição iniciar
+
+        //usando a mesma lógica vamos localizar o nome "Ingrid" e substituir por "Caio"
+        alunos.splice(alunos.indexOf("Ingrid"),1,"Caio")
+        
+        //após isso ficaremos com "Caio" repetido em duas posições diferentes, para excluir ele da posição antiga vamos fazer o seguinte
+        alunos.splice(alunos.lastIndexOf("Caio"),1)
+        //ele localiza o último registro com o conteúdo "Caio", e deleta somente 1 deles.
+
+        //Agora vamos brincar com o FOR
+        //Para mostrar somente a inicial de cada nome do array, sem precisar separar manualmente um por um, usaremos um for para isso
+        document.write("<h2>Brincando com For para saber a primeira letra dos nomes! </h2>")
+        for (let i = 0; i < alunos.length; i++) {
+            document.write("Primeira letra do nome é : "+alunos[i][0], " / Nome : "+alunos[i]+"</br>");            
+        }
+
+        //agora vamos colocar ele em ordem alfabética usando um recurso do js
+        alunos.sort();
+        //pronto, agora sua lista estará em ordem alfabética, vamos exibi-la que tal?
+        //porém, ela será exibida da mesma forma que foi declara, apenas uma lista com uma palavra ao lado da outra e não um a baixo da outra
+        document.write("<h2>Lista em ordem alfabética usando o .sort() </h2>")
+        document.write(alunos,"</br>");
+
+        //agora vamos conhecer o forEach
+        document.write("<h2>Lista usando forEach para mostrar índice do array de cada nome</h2>")
+        alunos.forEach(function(nome,posicao){
+            document.write("Aluno "+posicao," : "+nome+"</br>")
+        })
+        //aqui mostramos a posição no índice que cada nome esta ocupando no array
+
+        //agora vamos aprender uma função que conta quantas palavras tem no texto
+        //para isso iremos vamos criar uma variável contendo um conteúdo em string que será nosso texto
+        //abaixo, peguei apenas o significado de texto do wikipédia e coloquei como sendo minha string
+        var texto = "Em linguística, a noção de texto é ampla e ainda aberta a uma definição mais precisa. Grosso modo, pode ser entendido como manifestação linguística das ideias de um autor, que serão interpretadas pelo leitor de acordo com seus conhecimentos linguísticos e culturais. Seu tamanho é variável.";
+        //neste caso, vamo usar o log co console para saber a quantidade
+        console.log(texto.split(" "));
+        //para verificar é só abrir o inspecionar, ir na aba console e verificar o que ele retorna.
+        //ele vai te retornar a quantidade e quais são as palavras
+        //o que for colocado dentro dos parenteses do split será o parâmetro usado para que ele faça a separação dos caracteres de uma string.
+        
+    </script>
+</body>
+</html>
